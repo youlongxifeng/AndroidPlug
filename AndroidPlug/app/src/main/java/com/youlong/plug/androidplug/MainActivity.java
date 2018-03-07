@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
      * "app-debug.apk";
      **/
     File file;
-    Button open_view, open_fragment;
+    Button open_view, open_fragment,bt_open_version,bt_open_network;
     RelativeLayout mRelativeLayout;
 
     @Override
@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         open_view.setOnClickListener(this);
         open_fragment = findViewById(R.id.bt_open_fragment);
         open_fragment.setOnClickListener(this);
+        bt_open_version=findViewById(R.id.bt_open_version);
+        bt_open_version.setOnClickListener(this);
+        bt_open_network=findViewById(R.id.bt_open_network);
+        bt_open_network.setOnClickListener(this);
     }
 
     @Override
@@ -78,6 +82,16 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     fragmentTransaction.commit();
                 }*/
                 break;
+            case R.id.bt_open_version://获取插件版本
+                AdsPlugSDK.WhetherUpdate(this);
+                AdsPlugSDK.currentVersion(this);
+
+                break;
+            case R.id.bt_open_network://获取插件网络内容
+                AdsPlugSDK.upgradePlug(this);
+                break;
+                default:
+                    break;
         }
 
     }

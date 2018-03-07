@@ -10,22 +10,45 @@
     <Button
         android:id="@+id/bt_open_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
+        android:layout_margin="10dp"
         android:text="open_view"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
 
     <Button
         android:id="@+id/bt_open_fragment"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
+        android:layout_margin="10dp"
         android:text="open_fragment"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_open_view"
+        app:layout_constraintTop_toTopOf="parent"
         />
+
+    <Button
+        android:id="@+id/bt_open_version"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_margin="10dp"
+        android:text="open_version"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_open_fragment"
+        />
+
+    <Button
+        android:id="@+id/bt_open_network"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_margin="10dp"
+        android:text="open_network"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/bt_open_version"
+        app:layout_constraintTop_toBottomOf="@+id/bt_open_view"
+        />
+
+
 
     <View
         android:id="@+id/context_view"
@@ -34,35 +57,28 @@
         android:background="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_open_fragment"
+        app:layout_constraintTop_toBottomOf="@id/bt_open_network"
         ></View>
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_h"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3"/>
 
     <RelativeLayout
         android:id="@+id/rl_context_group"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:background="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline_h"
-        app:layout_constraintTop_toTopOf="@id/context_view"
+        app:layout_constraintTop_toTopOf="@id/bt_open_version"
         >
 
         <FrameLayout
             android:id="@+id/context_fragment"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@color/colorAccent"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="5dp"
+            android:background="@color/colorAccent"
             ></FrameLayout>
 
 

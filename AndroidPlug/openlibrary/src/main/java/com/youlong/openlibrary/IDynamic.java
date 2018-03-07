@@ -1,8 +1,10 @@
 package com.youlong.openlibrary;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 
 /**
@@ -17,16 +19,41 @@ import android.view.ViewGroup;
 
 public interface IDynamic {
     /**
-     *
      * @param context
      * @param viewGroup 插件显示控件父类
      */
-    void addPlugView(Context context, ViewGroup viewGroup);
+    View addPlugView(Context context, ViewGroup viewGroup);
 
     /**
      * 插件fragment显示类
+     *
      * @param context
      * @param containerViewId
      */
-   void addPlugFragment(Activity context, int containerViewId,Bundle build) ;
+    Fragment addPlugFragment(Activity context, int containerViewId, Bundle build);
+
+    /**
+     *
+     * @param activity
+     * @return
+     */
+    Fragment addPlugFragment(Activity activity);
+
+    /**
+     * s是否更新
+     * @return
+     */
+    boolean WhetherUpdate();
+
+    /**
+     * 当前版本
+     * @return
+     */
+    int currentVersion();
+
+    /**
+     * 升级插件
+     */
+    void upgradePlug();
+
 }
