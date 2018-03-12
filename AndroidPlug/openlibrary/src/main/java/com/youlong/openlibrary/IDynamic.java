@@ -43,7 +43,7 @@ public interface IDynamic {
      * s是否更新
      * @return
      */
-    boolean WhetherUpdate();
+    boolean whetherUpdate();
 
     /**
      * 当前版本
@@ -55,5 +55,10 @@ public interface IDynamic {
      * 升级插件
      */
     void upgradePlug();
+
+    /**
+     * 获取apk的安装路径
+     */
+    String getApkPath(Context context);
 
 }

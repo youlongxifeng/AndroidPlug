@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_update_group"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        >
+
+        <Button
+            android:id="@+id/bt_update"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:text="更新"
+            />
+
+
+        <Button
+            android:id="@+id/bt_open_install"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_toRightOf="@id/bt_update"
+            android:layout_weight="1"
+            android:text="安装"
+            />
+
+        <Button
+            android:id="@+id/bt_open_init1"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_toRightOf="@id/bt_open_install"
+            android:layout_weight="1"
+            android:text="更新前的例子"
+            android:textSize="12dp"
+            />
+
+        <Button
+            android:id="@+id/bt_open_init2"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/bt_open_init1"
+            android:layout_weight="1"
+            android:text="更新后的例子"
+            android:textSize="12dp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view11111111"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ll_update_group"
+        ></View>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_context_group_update"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/view11111111"
+        android:layout_marginTop="84dp"
+        android:background="@color/colorPrimaryDark"
+        >
+
+        <FrameLayout
+            android:id="@+id/context_fragment_update"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorAccent"
+            ></FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/context_fragment_update_2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_toRightOf="@+id/context_fragment_update"
+            android:background="#aaddaa"
+            >
+
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
